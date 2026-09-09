@@ -1,0 +1,55 @@
+# SAP CATS Assignment List
+# Populate this file by telling Joule: "import my assignments from <filename>.xlsx"
+# TIP: add extra keywords (abbreviations, email domains, project aliases) after import
+#      for better auto-matching against calendar events and sent emails.
+# Note: WBS element rows are not auto-imported; add them manually below as needed.
+
+assignments:
+
+  # --- Example: Internal Order ---
+  - cost_object: "12345678"
+    type: "Order"
+    description: "Sales - Example Customer - Project Name"
+    customer: "Example Customer"
+    start_date: "2026-01-01"
+    end_date: "2026-12-31"
+    responsible: "Firstname Lastname ( IO )"
+    keywords:
+      - "Example Customer"
+      - "ExampleProject"
+
+  # --- Example: WBS Element (add manually - not auto-imported) ---
+  - cost_object: "CPS.XXXXXXXX.XXXXX"
+    type: "WBS"
+    description: "REGION:COUNTRY:CUSTOMER:CONS: Project Description"
+    customer: "Example Customer Ltd"
+    project: "REGION:COUNTRY:CUSTOMER:CONS: Project Description"
+    start_date: "2026-01-01"
+    end_date: "2026-12-31"
+    responsible: "Firstname Lastname ( PR )"
+    keywords:
+      - "Example Customer Ltd"
+      - "ExampleCustomer"
+      - "ECL"
+
+  # --- Example: Sales Document ---
+  - cost_object: "XXXXXXXXX/XX"
+    type: "SalesDoc"
+    description: "MaxAttention - Example Customer"
+    customer: "Example Customer Ltd"
+    project: "MaxAttention - Example Customer"
+    start_date: "2026-01-01"
+    end_date: "2026-12-31"
+    responsible: "Firstname Lastname ( CC )"
+    keywords:
+      - "Example Customer"
+      - "MaxAttention"
+      - "ExampleKeyword"
+      - "Deloitte"
+
+  # --- SAP Internal meetings ---
+  # Replace cats_objnr with your own cost centre if needed.
+  - cost_object: "INTERNAL"
+    type: "CostCentre"
+    customer: "SAP Internal"
+    keywords: []
